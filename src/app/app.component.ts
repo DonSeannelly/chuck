@@ -6,14 +6,8 @@ import { Component } from '@angular/core';
     <!-- header -->
     <app-header></app-header>
 
-    <!-- home page -->
-    <app-home></app-home>
-
-    <!-- favorites page -->
-    <app-favorites></app-favorites>
-
     <!-- routes -->
-    <!-- <router-outlet></router-outlet> -->
+    <router-outlet></router-outlet>
 
     <!-- footer -->
     <app-footer></app-footer>

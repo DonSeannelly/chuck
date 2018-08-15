@@ -7,19 +7,26 @@ import { FavoritesComponent} from './components/favorites/favorites.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/Home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'Home',
     pathMatch: 'full',
     component: HomeComponent
   },
   {
-    path: 'contact',
+    path: 'Favorites',
     component: FavoritesComponent
   }
 ];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(routes)
   ],
+  exports: [RouterModule],
   declarations: []
 })
 export class AppRoutingModule { }
