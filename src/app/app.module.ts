@@ -14,13 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-
     HeaderComponent,
-
     FooterComponent,
-
     HomeComponent,
-
     FavoritesComponent,
   ],
   imports: [
