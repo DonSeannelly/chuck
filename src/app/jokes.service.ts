@@ -9,9 +9,12 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class JokesService {
   private jokeUrl = 'https://api.chucknorris.io/jokes/random'; // url to jokes
+  private joke = '';
 
   constructor(private http: HttpClient) {}
-  getJokes() {
+  getJoke() {
+    console.log('got a joke');
     return this.http.get(this.jokeUrl);
+
   }
 }
