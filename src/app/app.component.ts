@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   template: `
@@ -16,4 +17,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Chuck Norris Jokes';
+
 }

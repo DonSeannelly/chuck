@@ -1,3 +1,6 @@
 #search-joke {
   width: 100%
 }
+ li + li.no-favs {
+   display: none;
+ }

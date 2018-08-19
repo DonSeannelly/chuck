@@ -9,6 +9,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
+import { JokeService } from './joke.service';
+
 
 
 @NgModule({
@@ -24,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [JokeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
