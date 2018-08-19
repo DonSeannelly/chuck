@@ -1,3 +1,5 @@
+<!-- favorites.component.html
+     displays list of favorite jokes -->
 <div class="section">
   <div class="container has-text-centered">
     <h1 class="title">Favorite Jokes</h1>
@@ -15,10 +17,12 @@
           </div> -->
           <div class="section">
             <ul>
-              <li *ngFor="let element of favData" class="notification is-light">
+              <!-- create <li> elements for each item in the favs array -->
+              <li *ngFor="let element of favData" class="notification is-light subtitle">
+                <button class="delete"(click)="removeFav(element)"></button>
                 {{ element }}
               </li>
-              <li class="no-favs">
+              <li class="no-favs subtitle">
                 No favorites yet. Add some from the home page!
               </li>
             </ul>

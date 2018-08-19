@@ -10,6 +10,12 @@ import { HomeComponent } from './components/home/home.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JokeService } from './joke.service';
+import { AlertComponent } from './components/alert/alert.component';
+import { AlertService } from './alert.service';
+import { SearchComponent } from './components/search/search.component';
+import { SearchService } from './search.service';
+
+
 
 
 
@@ -20,13 +26,18 @@ import { JokeService } from './joke.service';
     FooterComponent,
     HomeComponent,
     FavoritesComponent,
+    AlertComponent,
+    SearchComponent,
+
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
-  providers: [JokeService],
+  providers: [JokeService, AlertService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
