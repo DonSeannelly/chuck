@@ -11,9 +11,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JokeService } from './joke.service';
 import { AlertComponent } from './components/alert/alert.component';
-import { AlertService } from './alert.service';
 import { SearchComponent } from './components/search/search.component';
-import { SearchService } from './search.service';
 import { FormsModule } from '@angular/forms';
 
 
@@ -39,7 +37,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
 
   ],
-  providers: [JokeService, AlertService, SearchService],
+  providers: [JokeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

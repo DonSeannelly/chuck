@@ -1,3 +1,5 @@
+// home.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { JokeService } from '../../joke.service';
 
@@ -25,28 +27,6 @@ export class HomeComponent implements OnInit {
   favButton() {
     this.jokeService.addFav();
   }
-
- /* constructor(private http: HttpClient) {
-  }
-
-  getJoke() {
-
-    interface JokeTime {
-      value: string;
-      category: string;
-    }
-    this.http.get<JokeTime>('https://api.chucknorris.io/jokes/random').subscribe(data => {
-      console.log('Value: ' + data.value);
-      console.log('Category: ' + data.category);
-      this.jokeResult = data.value;
-    });
-  }
-
-  addFavorite() {
-    this.favs.push(this.jokeResult);
-    console.log(this.favs);
-  } */
-
 
   ngOnInit() {
     this.jokeService.getJoke();

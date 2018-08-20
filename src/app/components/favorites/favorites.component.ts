@@ -1,5 +1,6 @@
+// favorites.components.ts
+
 import { Component, OnInit } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
 import { JokeService } from '../../joke.service';
 
 @Component ({
