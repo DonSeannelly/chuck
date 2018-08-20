@@ -10,7 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JokeService } from './joke.service';
-import { AlertComponent } from './components/alert/alert.component';
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
 
@@ -25,7 +24,6 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     FavoritesComponent,
-    AlertComponent,
     SearchComponent,
 
 
