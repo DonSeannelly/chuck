@@ -2,14 +2,35 @@
     <div class="container has-text-centered">
         <div class="field has-addons is-horizontal" >
             <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Find a joke that contains">
+              <input class="input"
+                     type="text"
+                     placeholder="Find a joke that contains"
+                     name="search-jokes"
+                     id = "search-jokes"
+                     [(ngModel)]="searchValue">
             </p>
             <p class="control">
-              <a class="button is-info">
-                Search
-              </a>
+              <button class="button is-info" (click)="searchButton(searchValue)">
+                <span class="icon has-text-white is-medium">
+                  <i class="fas fa-lg fa-search"></i>
+                </span>
+              </button>
             </p>
           </div>
+          <div class="container has-text-centered is-fluid" >
+              <div class="section">
+                <ul>
+                  <!-- create <li> elements for each item in the favs array -->
+                  <li *ngFor="let element of searchData" class="notification is-light subtitle">
+                    {{ element.value }}
+                    <br />
+                  </li>
+                  <li class="no-search subtitle">
+                    Search for jokes and they'll show up here!
+                  </li>
+                </ul>
+              </div>
+        </div>
     </div>
 
 
