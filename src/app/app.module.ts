@@ -15,8 +15,6 @@ import { AlertService } from './alert.service';
 import { SearchComponent } from './components/search/search.component';
 import { SearchService } from './search.service';
 import { FormsModule } from '@angular/forms';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
 
@@ -39,10 +37,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    InfiniteScrollModule
+
   ],
   providers: [JokeService, AlertService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-platformBrowserDynamic().bootstrapModule(AppModule);
+
