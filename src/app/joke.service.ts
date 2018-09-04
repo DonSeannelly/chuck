@@ -18,9 +18,9 @@ export class JokeService {
 
   constructor(private http: HttpClient) { }
 
-  // retrieve and display joke
+  //** retrieve and display joke. */
   getJoke() {
-    interface JokeTime { // work with data retrieved
+    interface JokeTime { //** work with data retrieved. */
       value: string;
       category: string;
       id: string;
@@ -32,15 +32,15 @@ export class JokeService {
       this.jokeResult = data.value;
     });
   }
-  // add currently displayed joke to the list of favorite jokes
+  //** add currently displayed joke to the list of favorite jokes. */
   addFav() {
     this.favs.push(this.jokeResult);
   }
-  // search for jokes
+  //** search for jokes. */
   searchJokes(string) {
     this.searchTerm = string;
     this.clearJokes();
-    interface JokeSearch { // interface with search data retrieved
+    interface JokeSearch { //** interface with search data retrieved. */
       result: any;
       value: string;
     }
@@ -49,7 +49,7 @@ export class JokeService {
       this.searchList = data.result;
     });
   }
-  // clear list of jokes
+  //** clear list of jokes. */
   clearJokes() {
     this.searchList = [];
   }

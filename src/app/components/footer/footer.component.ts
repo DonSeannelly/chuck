@@ -6,10 +6,8 @@ import { AppComponent } from '../../app.component';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+  export class FooterComponent {
+    constructor () {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+    }
 }

@@ -18,16 +18,13 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     FavoritesComponent,
-    SearchComponent,
-
-
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
-
+    FormsModule
   ],
   providers: [JokeService],
   bootstrap: [AppComponent]

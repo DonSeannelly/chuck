@@ -8,7 +8,7 @@ import { JokeService } from '../../joke.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
   searchValue: string;
 
@@ -28,8 +28,4 @@ export class SearchComponent implements OnInit {
   favButton() {
     this.jokeService.addFav();
   }
-
-  ngOnInit() {
-  }
-
 }
