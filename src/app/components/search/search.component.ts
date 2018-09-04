@@ -8,28 +8,22 @@ import { JokeService } from '../../joke.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+  export class SearchComponent {
+    searchValue: string;
 
-  searchValue: string;
+    constructor(private jokeService: JokeService) { }
 
-  constructor(private jokeService: JokeService) { }
+    //** get search results array from jokeservice. */
+    get searchData() {
+      return this.jokeService.searchList;
+    }
 
-  // get search results array from jokeservice
-  get searchData(): any {
-    return this.jokeService.searchList;
+    searchForJokes (string) {
+      string = this.searchValue;
+      this.jokeService.searchJokes(this.searchValue);
+    }
+
+    favButton() {
+      this.jokeService.addFav();
+    }
   }
-
-  searchButton (string) {
-    string = this.searchValue;
-    this.jokeService.searchJokes(this.searchValue);
-    console.log('Input Value: ' + this.searchValue);
-  }
-
-  favButton() {
-    this.jokeService.addFav();
-  }
-
-  ngOnInit() {
-  }
-
-}

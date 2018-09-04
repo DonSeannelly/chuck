@@ -1,4 +1,4 @@
-// favorites.components.ts
+//** favorites.component.ts - displays list of favorite jokes. */
 
 import { Component, OnInit } from '@angular/core';
 import { JokeService } from '../../joke.service';
@@ -8,23 +8,18 @@ import { JokeService } from '../../joke.service';
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.css']
 })
-export class FavoritesComponent implements OnInit {
+  export class FavoritesComponent {
 
-  constructor(private jokeService: JokeService) { }
+    constructor(private jokeService: JokeService) { }
 
-  // get favorites array from service
-get favData(): any {
-  return this.jokeService.favs;
-}
+      // get favorites array from service
+    get favData(): any {
+      return this.jokeService.favs;
+    }
 
-  // removes favorite from list
-removeFav(item) {
-  const index = this.jokeService.favs.indexOf(item);
-  this.jokeService.favs.splice(index, 1);
-}
-
-  ngOnInit() {
-
+      // removes favorite from list
+    removeFav(item) {
+      const index = this.jokeService.favs.indexOf(item);
+      this.jokeService.favs.splice(index, 1);
+    }
   }
-
-}
