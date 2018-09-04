@@ -9,15 +9,11 @@ import { JokeService } from '../../joke.service';
   styleUrls: ['./home.component.css']
 })
   export class HomeComponent implements OnInit {
-    readonly ROOT_URL = 'https://api.chucknorris.io/jokes/random';
-
     constructor (private jokeService: JokeService) {
     }
-
     get data(): string {
       return this.jokeService.jokeResult;
     }
-
     grabJoke() {
       this.jokeService.getJoke();
     }
