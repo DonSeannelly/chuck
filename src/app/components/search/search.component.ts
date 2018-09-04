@@ -22,7 +22,6 @@ export class SearchComponent {
   searchButton (string) {
     string = this.searchValue;
     this.jokeService.searchJokes(this.searchValue);
-    console.log('Input Value: ' + this.searchValue);
   }
 
   favButton() {
