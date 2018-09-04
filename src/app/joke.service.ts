@@ -2,6 +2,7 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { JokeTime } from './joke-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -20,11 +21,6 @@ import { HttpClient } from '@angular/common/http';
 
     //** retrieve and display joke. */
     getJoke() {
-      interface JokeTime { //** work with data retrieved. */
-        value: string;
-        category: string;
-        id: string;
-      }
       this.http.get<JokeTime>(this.jokeUrl + '/random').subscribe(data => {
         this.jokeResult = data.value;
       });
