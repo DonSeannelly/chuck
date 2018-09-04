@@ -10,8 +10,8 @@ import { JokeTime, JokeSearch } from './joke-interface';
   export class JokeService {
     jokeResult: string; // stores value of random joke
     favs = []; // arr that stores list of favorite jokes
-    searchList: any = []; // arr that stores list of search results
-    catList: any = [];
+    searchList = []; // arr that stores list of search results
+    catList = [];
     jokeUrl = 'https://api.chucknorris.io/jokes'; // url to get random joke
     searchUrl = 'https://api.chucknorris.io/jokes/search?query='; // url to search for jokes; requires input
     categoryUrl = 'https://api.chucknorris.io/jokes/categories'; // url to retrieve list of categories

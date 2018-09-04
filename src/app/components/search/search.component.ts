@@ -14,7 +14,7 @@ import { JokeService } from '../../joke.service';
     constructor(private jokeService: JokeService) { }
 
     //** get search results array from jokeservice. */
-    get searchData(): any {
+    get searchData() {
       return this.jokeService.searchList;
     }
 
