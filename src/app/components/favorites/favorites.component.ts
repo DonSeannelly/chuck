@@ -1,4 +1,4 @@
-// favorites.components.ts
+//** favorites.component.ts - displays list of favorite jokes. */
 
 import { Component, OnInit } from '@angular/core';
 import { JokeService } from '../../joke.service';
