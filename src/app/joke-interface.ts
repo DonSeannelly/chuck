@@ -5,3 +5,7 @@ export interface JokeTime { //** work with data retrieved. */
   category: string;
   id: string;
 }
+export interface JokeSearch { //** interface with search data retrieved. */
+  result: any;
+  value: string;
+}

@@ -2,7 +2,7 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { JokeTime } from './joke-interface';
+import { JokeTime, JokeSearch } from './joke-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -33,10 +33,6 @@ import { JokeTime } from './joke-interface';
     searchJokes(string) {
       this.searchTerm = string;
       this.clearJokes();
-      interface JokeSearch { //** interface with search data retrieved. */
-        result: any;
-        value: string;
-      }
       this.http.get<JokeSearch>(this.searchUrl + this.searchTerm ).subscribe(data => {
         this.searchList = data.result;
       });
